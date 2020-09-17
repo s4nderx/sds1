@@ -1,0 +1,18 @@
+import { type } from "os"
+
+export type RecordsResponse = {
+    content: RecordItem[];
+    totalPages: number;
+}
+
+export type RecordItem = {
+    id: number;
+    moment: string;
+    name: string;
+    age: number;
+    gamePlataform: Plataform;
+    gameTitle: string;
+    genreName: string;
+}
+
+export type Plataform = 'XBOX' | 'PC' | 'PLAYSTATION'
