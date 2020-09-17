@@ -10,7 +10,7 @@ export type RecordItem = {
     moment: string;
     name: string;
     age: number;
-    gamePlataform: Plataform;
+    gamePlatform: Plataform;
     gameTitle: string;
     genreName: string;
 }

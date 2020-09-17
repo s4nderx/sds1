@@ -4,8 +4,7 @@ import './styles.css'
 import { RecordsResponse } from './types';
 import { formatDate } from './helpers';
 import Pagination from './pagination'
-import { Link } from 'react-router-dom';
-
+import Filters from '../../components/filters';
 const BASE_URL = 'http://localhost:8080'
 
 const Records = () => {
@@ -24,13 +23,7 @@ const Records = () => {
     return(
         (
             <div className="page-container">
-                <div className="filters-container records-actions">
-                    <Link to="/charts">
-                        <button className="action-filters">
-                            VER GRÁFICOS
-                        </button>
-                    </Link>
-                </div>
+                <Filters link="/charts" linkText="VER GRÁFICO"/>
                 <table className="records-table" cellPadding="0" cellSpacing="0">
                     <thead>
                         <tr>
@@ -48,7 +41,7 @@ const Records = () => {
                                 <td>{formatDate(record.moment)}</td>
                                 <td>{record.name}</td>
                                 <td>{record.age}</td>
-                                <td className="text-secondary">{record.gamePlataform}</td>
+                                <td className="text-secondary">{record.gamePlatform}</td>
                                 <td>{record.genreName}</td>
                                 <td>{record.gameTitle}</td>
                             </tr>

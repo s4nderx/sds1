@@ -12,7 +12,7 @@ public class RecordDTO {
     private String name;
     private Integer age;
     private String gameTitle;
-    private Platform gamePlataform;
+    private Platform gamePlatform;
     private String genreName;
 
     public RecordDTO() {
@@ -24,7 +24,7 @@ public class RecordDTO {
         this.name = entity.getName();
         this.age = entity.getAge();
         this.gameTitle = entity.getGame().getTitle();
-        this.gamePlataform = entity.getGame().getPlatform();
+        this.gamePlatform = entity.getGame().getPlatform();
         this.genreName = entity.getGame().getGenre().getName();
     }
 
@@ -68,12 +68,12 @@ public class RecordDTO {
         this.gameTitle = gameTitle;
     }
 
-    public Platform getGamePlataform() {
-        return gamePlataform;
+    public Platform getGamePlatform() {
+        return gamePlatform;
     }
 
-    public void setGamePlataform(Platform gamePlataform) {
-        this.gamePlataform = gamePlataform;
+    public void setGamePlatform(Platform gamePlatform) {
+        this.gamePlatform = gamePlatform;
     }
 
     public String getGenreName() {
