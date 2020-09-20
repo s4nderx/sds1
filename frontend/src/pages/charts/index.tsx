@@ -5,16 +5,7 @@ import { barOptions, pieOptions } from './chat-options';
 import Chart from 'react-apexcharts';
 import axios from 'axios';
 import { buildBarSeries, getGenderChartData, getPlatformChartData } from './helpers'
-const chartData = [
-    {
-        x: 'ph',
-        y: 10
-    },
-    {
-        x: 'g',
-        y: 1000
-    }
-]
+
 
 type PieChartData = {
     labels: string[];
@@ -31,7 +22,7 @@ const initialPieData = {
     series: []
 }
 
-const BASE_URL = 'http://localhost:8080'
+const BASE_URL = 'https://sds1-s4nderx.herokuapp.com';
 
 const Charts = () => {
 
